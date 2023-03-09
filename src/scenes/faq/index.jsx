@@ -7,7 +7,9 @@ import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { tokens } from "../../theme";
 
+// function to handel FAQ section
 const FAQ = () => {
+  // dark mode or light mode
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (

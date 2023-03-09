@@ -3,10 +3,13 @@ import { tokens } from "../theme";
 import { useTheme } from "@mui/material";
 import { mockPieData as data } from "../data/mockData";
 
+// show on dashboard and on it's own page
 const PieChart = () => {
+  // dark mode / light mode theme
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (
+    // code copied from nivo/pie
     <ResponsivePie
       data={data}
       theme={{

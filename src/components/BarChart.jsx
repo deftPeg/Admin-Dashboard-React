@@ -3,11 +3,14 @@ import { ResponsiveBar } from "@nivo/bar";
 import { tokens } from "../theme";
 import { mockBarData as data } from "../data/mockData";
 
+// show on dashboard and on it's own page
+// modifications for dashboard bar chart
 const BarChart = ({ isDashboard = false }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
   return (
+    // code copied from nivo/bar
     <ResponsiveBar
       data={data}
       theme={{

@@ -4,10 +4,14 @@ import { geoFeatures } from "../data/mockGeoFeatures";
 import { tokens } from "../theme";
 import { mockGeographyData as data } from "../data/mockData";
 
+// show on dashboard and on it's own page
+// modifications for dashboard geography chart
 const GeographyChart = ({ isDashboard = false }) => {
+  // dark mode or light mode theme
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (
+    // code copied from nivo
     <ResponsiveChoropleth
       data={data}
       theme={{

@@ -3,11 +3,14 @@ import { useTheme } from "@mui/material";
 import { tokens } from "../theme";
 import { mockLineData as data } from "../data/mockData";
 
+// show on dashboard and on it's own page
 const LineChart = ({ isCustomLineColors = false, isDashboard = false }) => {
+  // dark mode or light mode theme
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
   return (
+    // code copied from nivo/line
     <ResponsiveLine
       data={data}
       theme={{
