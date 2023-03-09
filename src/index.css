@@ -1,0 +1,15 @@
+/* Resets */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'open sans', sans-serif;
+}
+/* End of resets */
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
