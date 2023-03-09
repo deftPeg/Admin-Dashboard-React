@@ -18,9 +18,11 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
+  // dark mode or light mode
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (
+    // menu item actions and links
     <MenuItem
       active={selected === title}
       style={{
@@ -67,7 +69,7 @@ const Sidebar = () => {
     >
       <ProSidebar collapsed={isCollapsed}>
         <Menu iconShape="square">
-          {/* LOGO AND MENU ICON */}
+          {/* LOGO AND MENU ICON (BURGER) */}
           <MenuItem
             onClick={() => setIsCollapsed(!isCollapsed)}
             icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
