@@ -5,7 +5,10 @@ import { mockDataContacts } from "../../data/mockData";
 import Header from "../../components/Header";
 import { useTheme } from "@mui/material";
 
+
+// function to create contacts grid (chart)
 const Contacts = () => {
+  // light or dark mode
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 

@@ -15,16 +15,22 @@ import {
 import Header from "../../components/Header";
 import { tokens } from "../../theme";
 
+
+// function to create calendar
 const Calendar = () => {
+  // light mode or dark mode
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  // array of events to be put on calendar
   const [currentEvents, setCurrentEvents] = useState([]);
 
+  // Function to handle selecting date to register an event for that day
   const handleDateClick = (selected) => {
     const title = prompt("Please enter a new title for your event");
     const calendarApi = selected.view.calendar;
     calendarApi.unselect();
 
+    // add event into calendar app
     if (title) {
       calendarApi.addEvent({
         id: `${selected.dateStr}-${title}`,
@@ -36,6 +42,7 @@ const Calendar = () => {
     }
   };
 
+  // function to handle deleting event
   const handleEventClick = (selected) => {
     if (
       window.confirm(
@@ -113,12 +120,12 @@ const Calendar = () => {
               {
                 id: "12315",
                 title: "All-day event",
-                date: "2022-09-14",
+                date: "2023-01-17",
               },
               {
                 id: "5123",
                 title: "Timed event",
-                date: "2022-09-28",
+                date: "2023-02-02",
               },
             ]}
           />

@@ -1,9 +1,13 @@
 import { Box, Button, TextField } from "@mui/material";
+// Formik creates form
 import { Formik } from "formik";
+// yup is for validation
 import * as yup from "yup";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Header from "../../components/Header";
 
+
+// function to create profile form
 const Form = () => {
   const isNonMobile = useMediaQuery("(min-width:600px)");
 

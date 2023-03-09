@@ -7,9 +7,13 @@ import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
 import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
 import Header from "../../components/Header";
 
+
+// function to create TEAM grid (chart)
 const Team = () => {
+  // dark mode or light mode colors
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  // fetching data from mock data. "id" is for specific data and "ID" is for column property
   const columns = [
     { field: "id", headerName: "ID" },
     {
